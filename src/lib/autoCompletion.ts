@@ -1,0 +1,119 @@
+// 自动补全组件名称
+
+import { AdComponent, ComponentAttrValue, ComponentAttr } from './components'
+
+function createComponentFilter(existsTagAttrs: { [key: string]: string | boolean }, event?: boolean) {
+  return (attr: ComponentAttr) => {
+    let isEvent = false
+    return existsTagAttrs[attr.name] == null && (event == null || (event ? isEvent : !isEvent))
+  }
+}
+
+function list(title: string, items?: string[]) {
+  if (!items || !items.length) return []
+  if (items.length === 1) return [field(title, items[0])]
+  return [field(title, items.map(it => `\n* ${it}`).join(''))]
+}
+
+function field(title: string, value: string) {
+  return `**${title}:** ${value}`
+}
+
+function formatAttrValue(av: { value: string; desc?: string; since?: string }) {
+  let rows = [av.value]
+  if (av.desc) rows.push(`**${av.desc}**`)
+  if (rows.length > 1) rows[0] += ':'
+  return rows.join(' ')
+}
+
+function getComponentAttrMarkdown(a: ComponentAttr) {
+  let rows = a.desc ? [a.desc] : [a.name]
+  if (a.type) rows.push(field('类型', Array.isArray(a.type) ? a.type.join(' ') : a.type))
+  if (a.enum) rows.push(...list('可选值', a.enum.map(formatAttrValue)))
+
+  return rows.join('\n\n')
+}
+
+function mapComponentAttr(attr: ComponentAttr) {
+  return { attr, markdown: getComponentAttrMarkdown(attr) }
+}
+
+const getComponent = (tagName: string, components: Array<AdComponent>) => {
+  const comp = components.find((component) => component.name === tagName)
+  return comp
+}
+
+const getComponentMarkdown = (component: AdComponent) => {
+  let rows = component.desc ? component.desc : component.name
+  return rows
+}
+
+const getComponentAttrValueMarkdown = (v: ComponentAttrValue) => {
+  let rows = v.desc || v.value
+  return rows
+}
+
+const mapComponent = (component: AdComponent) => {
+  return { component, markdown: getComponentMarkdown(component) }
+}
+
+
+const getAvailableAttrsFromComponent = (
+  comp: AdComponent,
+  tagAttrs: { [key: string]: string | boolean }
+): ComponentAttr[] => {
+  let attrs = comp.attrs || []
+  let results = attrs.filter(a => tagAttrs[a.name] == null); // 先取出没有写的属性
+  return results
+}
+
+const getAvailableAttrs = (
+  tagName: string,
+  tagAttrs: { [key: string]: string | boolean },
+  components: Array<AdComponent>
+) => {
+  let comp = getComponent(tagName, components)
+  return comp ? getAvailableAttrsFromComponent(comp, tagAttrs) : []
+}
+
+export interface TagItem {
+  component: AdComponent
+  markdown: string
+}
+
+// 自动补全支持的 tag
+export const autoCompleteTagName = (
+  components: Array<AdComponent>
+): Array<TagItem> => {
+  const tags: Array<TagItem> = components.map(mapComponent)
+  return tags
+}
+
+export const autoCompleteTagAttr = (tagName: string, tagAttrs: { [key: string]: string | boolean }, components: Array<AdComponent>) => {
+  const attrs = getAvailableAttrs(tagName, tagAttrs, components)
+  // 属性不能是已经存在的，也不能是事件
+  let filter = createComponentFilter(tagAttrs, false)
+  return {
+    natives: attrs.filter(filter).map(mapComponentAttr),
+  }
+}
+
+// 自动补全指定的属性的值
+export const autoCompleteTagAttrValue = (
+  tagName: string,
+  tagAttrName: string,
+  components: Array<AdComponent>
+) => {
+  const comp = getComponent(tagName, components)
+  if (!comp || !comp.attrs) return []
+  let attr = comp.attrs.find((a) => a.name === tagAttrName)
+  if (!attr) return []
+  let values = attr.enum ? attr.enum : []
+
+  return values.map((v) => {
+    return {
+      value: v.value,
+      markdown: getComponentAttrValueMarkdown(v),
+    }
+  })
+}

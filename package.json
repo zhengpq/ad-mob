@@ -10,7 +10,7 @@
 		"Other"
 	],
 	"activationEvents": [
-        "onCommand:ad-mob.helloWorld"
+		"*"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
@@ -19,7 +19,22 @@
 				"command": "ad-mob.helloWorld",
 				"title": "Hello World"
 			}
-		]
+		],
+		"languages": [{
+			"id": "wxml",
+			"aliases": ["wxml", "wxml"],
+			"extensions": [".wxml"],
+			"configuration": "./language-configuration.json"
+		}],
+		"grammars": [{
+				"language": "wxml",
+				"scopeName": "text.html.wxml",
+				"path": "./wxml.tmLanguage.json",
+				"embeddedLanguages": {
+          "text.html": "html",
+          "source.js": "js"
+        }
+		}]
 	},
 	"scripts": {
 		"vscode:prepublish": "yarn run package",
