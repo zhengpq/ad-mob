@@ -46,11 +46,6 @@ class WxmlAutoCompletion
       case '"':
       case "'":
         return this.createComponentAttributeSnippetItems(document, position)
-      case ':': // 绑定变量 （也可以是原生小程序的控制语句或事件，如 wx:for, bind:tap）
-      case '@': // 绑定事件
-      case '-': // v-if
-      case '.': // 变量或事件的修饰符
-        return []
       case '/': // 闭合标签
         return this.createCloseTagCompletionItem(document, position)
       default:
