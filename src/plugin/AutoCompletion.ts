@@ -13,9 +13,11 @@ import {
   autoCompleteTagName,
   TagItem,
 } from '../lib/autoCompletion'
-import components from '../lib/components'
+// import components from '../lib/components'
+const components = require('../lib/vscodeData.json')
 import { getWxmlTag } from '../lib/getTagAtPosition'
 import { getLastChar, getCloseTag } from '../lib/helper'
+console.log('paki ----------', components)
 
 export default class AutoCompletion {
   constructor() {}
@@ -102,7 +104,7 @@ export default class AutoCompletion {
       let values = a.enum
         ? a.enum
         : a.subAttrs
-        ? a.subAttrs.map((sa) => ({ value: sa.equal }))
+        ? a.subAttrs.map((sa: any) => ({ value: sa.equal }))
         : []
       if (values.length) {
         value = '${1}'
@@ -167,6 +169,7 @@ export default class AutoCompletion {
         )
       })
     }
+    console.log('paki 99999', tags)
     return tags
   }
 

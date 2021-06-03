@@ -19,6 +19,10 @@ function field(title: string, value: string) {
   return `**${title}:** ${value}`
 }
 
+function link(name: string, url: string) {
+  return `[${name}](${url})`
+}
+
 function formatAttrValue(av: { value: string; desc?: string; since?: string }) {
   let rows = [av.value]
   if (av.desc) rows.push(`**${av.desc}**`)
@@ -27,8 +31,8 @@ function formatAttrValue(av: { value: string; desc?: string; since?: string }) {
 }
 
 function getComponentAttrMarkdown(a: ComponentAttr) {
-  let rows = a.desc ? [a.desc] : [a.name]
-  if (a.type) rows.push(field('类型', Array.isArray(a.type) ? a.type.join(' ') : a.type))
+  let rows = a.description ? [a.description] : [a.name]
+  if (a.type) rows.push(field('类型', Array.isArray(a.type) ? a.type.join(',') : a.type))
   if (a.enum) rows.push(...list('可选值', a.enum.map(formatAttrValue)))
 
   return rows.join('\n\n')
@@ -44,12 +48,13 @@ const getComponent = (tagName: string, components: Array<AdComponent>) => {
 }
 
 const getComponentMarkdown = (component: AdComponent) => {
-  let rows = component.desc ? component.desc : component.name
-  return rows
+  let rows = component.description ? [component.description] : [component.name]
+  if (component.tutorial) rows.push(link('官方文档', component.tutorial))
+  return rows.join('\n\n')
 }
 
 const getComponentAttrValueMarkdown = (v: ComponentAttrValue) => {
-  let rows = v.desc || v.value
+  let rows = v.description || v.value
   return rows
 }
 
@@ -85,6 +90,7 @@ export interface TagItem {
 export const autoCompleteTagName = (
   components: Array<AdComponent>
 ): Array<TagItem> => {
+  console.log('paki 111', components)
   const tags: Array<TagItem> = components.map(mapComponent)
   return tags
 }
