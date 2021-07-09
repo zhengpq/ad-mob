@@ -1,7 +1,7 @@
 // 自动补全组件名称
 
 import { AdComponent, ComponentAttrValue, ComponentAttr } from './components'
-import AduiIcon from 'adui-icon'
+const AduiIcon = require('adui-icon').default
 
 function createComponentFilter(existsTagAttrs: { [key: string]: string | boolean }, event?: boolean) {
   return (attr: ComponentAttr) => {
