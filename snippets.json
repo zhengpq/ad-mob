@@ -1,0 +1,259 @@
+{
+  "ad-action-sheet": {
+    "prefix": "ad-action-sheet",
+    "body": [
+      "<ad-action-sheet visible=\"{{${1}}}\" bind:onChange=\"${2}\" bind:onClose=\"${3}\" >",
+      "\t<ad-action-sheet-item title=\"${4}\" value=\"{{${5}}}\" />",
+      "</ad-action-sheet>"
+    ],
+    "description": "行动面板组件"
+  },
+  "ad-action-sheet-item": {
+    "prefix": "ad-action-sheet-item",
+    "body": [
+      "<ad-action-sheet-item title=\"${1}\" value=\"{{${2}}}\" >${3}</ad-action-sheet-item>"
+    ],
+    "description": "行动面板子组件"
+  },
+  "ad-dialog": {
+    "prefix": "ad-dialog",
+    "body": [
+      "<ad-dialog visible=\"{{$1}}\" title=\"$2\" bind:onConfirm=\"$3\" bind:onCancel=\"$4\" >",
+      "\t$5",
+      "</ad-dialog>"
+    ],
+    "description": "行动面板子组件"
+  },
+  "ad-empty-state": {
+    "prefix": "ad-empty-state",
+    "body": ["<ad-empty-state text=\"$1\" type=\"$2\" />"],
+    "description": "空状态组件"
+  },
+  "ad-load-more": {
+    "prefix": "ad-load-more",
+    "body": ["<ad-load-more text=\"$1\" />"],
+    "description": "页面底部提示组件"
+  },
+  "ad-message": {
+    "prefix": "ad-message",
+    "body": ["<ad-message title=\"$1\" intent=\"$2\" desc=\"$3\" />"],
+    "description": "全局提示组件"
+  },
+  "ad-popover": {
+    "prefix": "ad-popover",
+    "body": [
+      "<ad-popover placement=\"$1\" visible=\"{{$2}}\" bind:onClose=\"$3\" >",
+      "\t$4",
+      "\t<view slot=\"pop\"></view>",
+      "</ad-popover>"
+    ],
+    "description": "气泡提示组件"
+  },
+  "ad-select": {
+    "prefix": "ad-select",
+    "body": [
+      "<ad-select>",
+      "\t<ad-select-item key=\"{{$1}}\" options=\"{{$2}}\" value=\"{{$3}}\" bind:onChange=\"$4\" />",
+      "</ad-select>"
+    ],
+    "description": "选择器组件"
+  },
+  "ad-select-item": {
+    "prefix": "ad-select-item",
+    "body": [
+      "<ad-select-item key=\"{{$1}}\" options=\"{{$2}}\" value=\"{{$3}}\" />"
+    ],
+    "description": "选择器子组件"
+  },
+  "ad-sheet": {
+    "prefix": "ad-sheet",
+    "body": [
+      "<ad-sheet visible=\"{{$1}}\" title=\"$2\" bind:onClose=\"$3\" >",
+      "\t$4",
+      "</ad-sheet>"
+    ],
+    "description": "半屏面板组件"
+  },
+  "ad-slider": {
+    "prefix": "ad-slider",
+    "body": [
+      "<ad-slider min=\"{{$1}}\" max=\"{{$2}}\" value=\"{{$3}}\" bind:onChange=\"$4\" />"
+    ],
+    "description": "滑动条组件"
+  },
+  "ad-spinner": {
+    "prefix": "ad-spinner",
+    "body": ["<ad-spinner size=\"medium\" />"],
+    "description": "旋转加载组件"
+  },
+  "ad-avatar": {
+    "prefix": "ad-avatar",
+    "body": ["<ad-avatar src=\"$1\" />"],
+    "description": "头像组件"
+  },
+  "ad-badge": {
+    "prefix": "ad-badge",
+    "body": ["<ad-badge>$1</ad-badge>"],
+    "description": "徽标组件"
+  },
+  "ad-button": {
+    "prefix": "ad-button",
+    "body": ["<ad-button>$1</ad-button>"],
+    "description": "按钮组件"
+  },
+  "ad-card": {
+    "prefix": "ad-card",
+    "body": ["<ad-card>", "\t$1", "</ad-card>"],
+    "description": "卡片组件"
+  },
+  "ad-cell": {
+    "prefix": "ad-cell",
+    "body": ["<ad-cell title=\"$1\" value=\"{{$2}}\"/>"],
+    "description": "列表子组件"
+  },
+  "ad-cell-group": {
+    "prefix": "ad-cell-group",
+    "body": [
+      "<ad-cell-group>",
+      "\t<ad-cell title=\"$1\" value=\"$2\"/>",
+      "</ad-cell-group>"
+    ],
+    "description": "列表父组件"
+  },
+  "ad-checkbox": {
+    "prefix": "ad-checkbox",
+    "body": ["<ad-checkbox value=\"{{$1}}\">$2</ad-checkbox>"],
+    "description": "多选子组件"
+  },
+  "ad-checkbox-group": {
+    "prefix": "ad-checkbox-group",
+    "body": [
+      "<ad-checkbox-group value=\"{{$1}}\" bind:onChange=\"$2\">",
+      "\t<ad-checkbox-field>",
+      "\t\t<ad-checkbox value=\"{{$3}}\">$4</ad-checkbox>",
+      "\t</ad-checkbox-field>",
+      "</ad-checkbox-group>"
+    ],
+    "description": "多选父组件"
+  },
+  "ad-collapse": {
+    "prefix": "ad-collapse",
+    "body": [
+      "<ad-collapse bind:onChange=\"$1\">",
+      "\t<ad-collapse-item value=\"{{$2}}\" title=\"$3\">",
+      "\t\t$4",
+      "\t</ad-collapse-item>",
+      "</ad-collapse>"
+    ],
+    "description": "手风琴父组件"
+  },
+  "ad-collapse-item": {
+    "prefix": "ad-collapse-item",
+    "body": [
+      "<ad-collapse-item value=\"{{$1}}\" title=\"$2\">",
+      "\t$3",
+      "</ad-collapse-item>"
+    ],
+    "description": "手风琴子组件"
+  },
+  "ad-input": {
+    "prefix": "ad-input",
+    "body": [
+      "<ad-input value=\"{{$1}}\" placeholder=\"$2\" bind:onChange=\"$3\" />"
+    ],
+    "description": "输入组件"
+  },
+  "ad-picture": {
+    "prefix": "ad-picture",
+    "body": ["<ad-picture src=\"$1\" style=\"$2\"/>"],
+    "description": "图片组件"
+  },
+  "ad-radio": {
+    "prefix": "ad-radio",
+    "body": ["<ad-radio value=\"{{$1}}\">$2</ad-radio>"],
+    "description": "单选子组件"
+  },
+  "ad-radio-group": {
+    "prefix": "ad-radio-group",
+    "body": [
+      "<ad-radio-group value=\"{{$1}}\" bind:onChange=\"$2\">",
+      "\t<ad-radio-field>",
+      "\t\t<ad-radio value=\"{{$3}}\">$4</ad-radio>",
+      "\t</ad-radio-field>",
+      "</ad-radio-group>"
+    ],
+    "description": "单选子组件"
+  },
+  "ad-search-bar": {
+    "prefix": "ad-search-bar",
+    "body": [
+      "<ad-search-bar value=\"{{$1}}\" placeholder=\"$2\" bind:onChange=\"$3\"/>"
+    ],
+    "description": "搜索框组件"
+  },
+  "ad-stepper": {
+    "prefix": "ad-stepper",
+    "body": [
+      "<ad-stepper value=\"{{$1}}\" min=\"{{$2}}\" max=\"{{$3}}\" step=\"{{$4}}\" bind:onChange=\"$5\" />"
+    ],
+    "description": "步进器组件"
+  },
+  "ad-steps": {
+    "prefix": "ad-stepper",
+    "body": [
+      "<ad-steps value=\"{{$1}}\">",
+      "<ad-steps-item value=\"{{$2}}\" title=\"$3\" stepNumber=\"$4\" desc=\"$5\" />",
+      "</ad-steps>"
+    ],
+    "description": "步骤父组件"
+  },
+  "ad-steps-item": {
+    "prefix": "ad-stepper-item",
+    "body": [
+      "<ad-steps-item value=\"{{$1}}\" title=\"$2\" stepNumber=\"$3\" desc=\"$4\" />"
+    ],
+    "description": "步骤子组件"
+  },
+  "ad-switch": {
+    "prefix": "ad-switch",
+    "body": ["<ad-switch checked=\"{{$1}}\" bind:onChange=\"$2\" />"],
+    "description": "开关组件"
+  },
+  "ad-tag": {
+    "prefix": "ad-tag",
+    "body": ["<ad-tag theme=\"light\" intent=\"$1\">$2</ad-tag>"],
+    "description": "标签组件"
+  },
+  "ad-upload-image": {
+    "prefix": "ad-upload-image",
+    "body": [
+      "<ad-upload-image value=\"{{$1}}\" bind:onChange=\"$2\" desc=\"上传图片\" />"
+    ],
+    "description": "标签组件"
+  },
+  "ad-navigation": {
+    "prefix": "ad-navigation",
+    "body": ["<ad-navigation title=\"$1\" icon=\"$2\" />"],
+    "description": "导航组件"
+  },
+  "ad-tabs": {
+    "prefix": "ad-tabs",
+    "body": [
+      "<ad-tabs value=\"{{$1}}\" bind:onChange=\"$2\" tabItems=\"{{$3}}\" />"
+    ],
+    "description": "标签页组件"
+  },
+  "ad-tabbar": {
+    "prefix": "ad-tabs",
+    "body": [
+      "<ad-tabbar value=\"{{$1}}\" bind:onChange=\"$2\">",
+      "\t<ad-tabbar-item value=\"{{$3}}\">",
+      "\t\t<image slot=\"icon\" src=\"$4\" />",
+      "\t\t<image slot=\"icon-active\" src=\"$5\" />",
+      "\t\t$6",
+      "\t</ad-tabbar-item>",
+      "</ad-tabbar>"
+    ],
+    "description": "标签页组件"
+  }
+}

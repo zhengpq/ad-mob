@@ -20,7 +20,7 @@ import { getLastChar, getCloseTag } from '../lib/helper'
 console.log('paki ----------', components)
 
 export default class AutoCompletion {
-  constructor() {}
+  constructor() { }
 
   get attrQuote() {
     return '"'
@@ -73,7 +73,7 @@ export default class AutoCompletion {
       ''
     )}${extraSpace}\${${attrsNumber}}>\${${attrsNumber + 1}}</${
       component.name
-    }>\${0}`
+      }>\${0}`
     tagItem.insertText = new SnippetString(snippet)
     tagItem.documentation = new MarkdownString(markdown)
     tagItem.sortText = sortText
@@ -104,8 +104,8 @@ export default class AutoCompletion {
       let values = a.enum
         ? a.enum
         : a.subAttrs
-        ? a.subAttrs.map((sa: any) => ({ value: sa.equal }))
-        : []
+          ? a.subAttrs.map((sa: any) => ({ value: sa.equal }))
+          : []
       if (values.length) {
         value = '${1}'
         item.command = autoSuggestCommand()
@@ -180,9 +180,9 @@ export default class AutoCompletion {
   ) {
     const tag = getWxmlTag(document, position)
     if (!tag) return []
-    if (tag.isOnTagName)
+    if (tag.isOnTagName) {
       return this.createComponentSnippetItems(document, position, tag.name)
-    console.log('createComponentAttributeSnippetItems')
+    }
     if (tag.isOnAttrValue && tag.attrName) {
       const attrValue = tag.attrs[tag.attrName]
       if (tag.attrName === 'class' || /^[\w\d-]+-class/.test(tag.attrName)) {
@@ -210,7 +210,6 @@ export default class AutoCompletion {
           })
         }
       }
-
       return []
     } else {
       let res = autoCompleteTagAttr(tag.name, tag.attrs, components)

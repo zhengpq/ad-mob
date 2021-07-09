@@ -24,6 +24,7 @@ export function activate(context: vscode.ExtensionContext) {
   let completion = vscode.languages.registerCompletionItemProvider(
     { scheme: 'file', language: 'wxml' },
     autoCompletionWxml,
+    '\n',
     '<',
     ' ',
     ':',

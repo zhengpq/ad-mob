@@ -1,6 +1,7 @@
 // 自动补全组件名称
 
 import { AdComponent, ComponentAttrValue, ComponentAttr } from './components'
+import AduiIcon from 'adui-icon'
 
 function createComponentFilter(existsTagAttrs: { [key: string]: string | boolean }, event?: boolean) {
   return (attr: ComponentAttr) => {
@@ -90,7 +91,6 @@ export interface TagItem {
 export const autoCompleteTagName = (
   components: Array<AdComponent>
 ): Array<TagItem> => {
-  console.log('paki 111', components)
   const tags: Array<TagItem> = components.map(mapComponent)
   return tags
 }
@@ -111,10 +111,19 @@ export const autoCompleteTagAttrValue = (
   components: Array<AdComponent>
 ) => {
   const comp = getComponent(tagName, components)
+  console.log('paki tagname', tagName, tagAttrName)
   if (!comp || !comp.attrs) return []
   let attr = comp.attrs.find((a) => a.name === tagAttrName)
   if (!attr) return []
-  let values = attr.enum ? attr.enum : []
+  let values = []
+  if (tagAttrName === 'icon') {
+    console.log(AduiIcon.svgData)
+    const icons = Object.keys(AduiIcon.svgData)
+    console.log('paki ad-icon', icons )
+    values = icons.map((item) => { return { value: item } })
+  } else {
+    values = attr.enum ? attr.enum : []
+  }
 
   return values.map((v) => {
     return {

@@ -69,7 +69,7 @@
       }
     ],
     "name": "ad-action-sheet",
-    "description": "行动面板组件，ad-action-sheet-item 的祖父组件",
+    "description": "行动面板父组件，ad-action-sheet-item 的祖父组件",
     "tutorial": "http://ad-mob.woa.com/src-components-action-sheet-action-sheet"
   },
   {
@@ -130,7 +130,7 @@
       }
     ],
     "name": "ad-action-sheet-item",
-    "description": "行动面板组件，ad-action-sheet 的子孙组件"
+    "description": "行动面板子组件，ad-action-sheet 的子孙组件"
   },
   {
     "attrs": [
@@ -166,7 +166,7 @@
       }
     ],
     "name": "ad-animation",
-    "description": "行动面板组件，ad-action-sheet-item 的祖父组件",
+    "description": "动画组件",
     "tutorial": "http://ad-mob.woa.com/src-components-action-sheet-action-sheet"
   },
   {
@@ -195,9 +195,9 @@
         "description": "头像尺寸",
         "defaultValue": "medium",
         "enum": [
-          { "value": "large", "desc": " 42px * 42px " },
-          { "value": " medium", "desc": " 34px * 34px " },
-          { "value": " small", "desc": " 28px * 28px" }
+          { "value": "large", "description": "42px * 42px" },
+          { "value": "medium", "description": "34px * 34px" },
+          { "value": "small", "description": "28px * 28px" }
         ]
       },
       {
@@ -286,7 +286,7 @@
         "defaultValue": "false"
       },
       {
-        "name": "isDot",
+        "name": "isFixed",
         "type": ["Boolean"],
         "description": "是否固定在右上角",
         "defaultValue": "false"
@@ -322,11 +322,11 @@
         "description": "类型，不同类型的按钮对应不同的颜色",
         "defaultValue": "primary",
         "enum": [
-          { "value": "success " },
-          { "value": " primary " },
-          { "value": " warning " },
-          { "value": " danger " },
-          { "value": " normal" }
+          { "value": "success" },
+          { "value": "primary" },
+          { "value": "warning" },
+          { "value": "danger" },
+          { "value": "normal" }
         ]
       },
       {
@@ -335,9 +335,9 @@
         "description": "主题，主题定义按钮的风格",
         "defaultValue": "standard",
         "enum": [
-          { "value": "standard " },
-          { "value": " light " },
-          { "value": " text" }
+          { "value": "standard" },
+          { "value": "light" },
+          { "value": "text" }
         ]
       },
       {
@@ -351,7 +351,7 @@
         "type": ["String"],
         "description": "尺寸",
         "defaultValue": "medium",
-        "enum": [{ "value": "small " }, { "value": " medium" }]
+        "enum": [{ "value": "small" }, { "value": "medium" }]
       },
       {
         "name": "fitContent",
@@ -383,9 +383,9 @@
         "description": "加载组件尺寸",
         "defaultValue": "small",
         "enum": [
-          { "value": "large " },
-          { "value": " medium " },
-          { "value": " small" }
+          { "value": "large" },
+          { "value": "medium" },
+          { "value": "small" }
         ]
       },
       {
@@ -448,9 +448,9 @@
         "description": "指定返回用户信息的语言",
         "defaultValue": "en",
         "enum": [
-          { "value": "zh_CN", "desc": " 简体中文 " },
-          { "value": " zh_TW", "desc": " 繁体中文 " },
-          { "value": " en", "desc": " 英文" }
+          { "value": "zh_CN", "description": "简体中文" },
+          { "value": "zh_TW", "description": "繁体中文" },
+          { "value": "en", "description": "英文" }
         ]
       },
       {
@@ -498,36 +498,36 @@
       {
         "name": "bind:onGetUserInfo",
         "type": ["Function"],
-        "description": "",
+        "description": "用户点击该按钮时，会返回获取到的用户信息，回调的detail数据与wx.getUserInfo返回的一致，open-type=&quot;getUserInfo&quot;时有效",
         "defaultValue": ""
       },
       {
         "name": "bind:onContact",
         "type": ["Function"],
-        "description": "",
+        "description": "客服消息回调，open-type=&quot;contact&quot;时有效",
         "defaultValue": ""
       },
       {
         "name": "bind:onGetPhoneNumber",
         "type": ["Function"],
-        "description": "",
+        "description": "获取用户手机号回调，open-type=getPhoneNumber时有效",
         "defaultValue": ""
       },
       {
         "name": "bind:onError",
         "type": ["Function"],
-        "description": "",
+        "description": "当使用开放能力时，发生错误的回调，open-type=launchApp时有效",
         "defaultValue": ""
       },
       {
         "name": "bind:onOpenSetting",
         "type": ["Function"],
-        "description": "",
+        "description": "在打开授权设置页后回调，open-type=openSetting时有效",
         "defaultValue": ""
       }
     ],
     "name": "ad-button",
-    "description": "头像组件",
+    "description": "按钮组件",
     "tutorial": "http://ad-mob.woa.com/src-components-button-button"
   },
   {
@@ -693,7 +693,7 @@
         "name": "leftIconColor",
         "type": ["String"],
         "description": "左边图标的颜色",
-        "defaultValue": "var(--transparent-gray-800, rgba(0, 0, 0, 0.58))"
+        "defaultValue": "var(--transparent-gray-900, rgba(0, 0, 0, 0.88))"
       },
       {
         "name": "leftIconSize",
@@ -799,7 +799,7 @@
       }
     ],
     "name": "ad-cell",
-    "description": "列表组件，ad-cell-group 的子孙组件",
+    "description": "列表子组件，ad-cell-group 的子孙组件",
     "tutorial": "http://ad-mob.woa.com/src-components-cell-cell"
   },
   {
@@ -830,7 +830,7 @@
       }
     ],
     "name": "ad-cell-group",
-    "description": "列表组组件，ad-cell 组件的祖先组件",
+    "description": "列表父组件，ad-cell 组件的祖先组件",
     "tutorial": "http://ad-mob.woa.com/src-components-cell-group-cell-group"
   },
   {
@@ -866,7 +866,7 @@
         "defaultValue": "false"
       },
       {
-        "name": "disabled",
+        "name": "customStyle",
         "type": ["String"],
         "description": "自定义样式",
         "defaultValue": "''"
@@ -922,7 +922,7 @@
       }
     ],
     "name": "ad-checkbox-group",
-    "description": "多选组件组，ad-checkbox 组件的祖先组件",
+    "description": "多选父件组，ad-checkbox 组件的祖先组件",
     "tutorial": "http://ad-mob.woa.com/src-components-checkbox-group-checkbox-group"
   },
   {
@@ -1121,8 +1121,8 @@
         "description": "弹窗的类型",
         "defaultValue": "confirm",
         "enum": [
-          { "value": "confirm", "desc": " 有取消和确定按钮 " },
-          { "value": " inform", "desc": " 只有去顶按钮" }
+          { "value": "confirm", "description": "有取消和确定按钮" },
+          { "value": "inform", "description": "只有去顶按钮" }
         ]
       },
       {
@@ -1132,9 +1132,9 @@
         "defaultValue": "false"
       },
       {
-        "name": "{}",
-        "type": [],
-        "description": "buttonList 按钮列表，这种情况用于有多个可选项的情况，子项的格式为 {value: any, text: string}，value 是每个项的唯一标识，是必须项",
+        "name": "buttonList",
+        "type": ["Array.<Any>"],
+        "description": "按钮列表，这种情况用于有多个可选项的情况，子项的格式为 {value: any, text: string}，value 是每个项的唯一标识，是必须项",
         "defaultValue": "[]"
       },
       {
@@ -1254,12 +1254,18 @@
         "description": "空状态类型",
         "defaultValue": "list",
         "enum": [
-          { "value": "search", "desc": " 搜索结果为空 " },
-          { "value": " store", "desc": " 门店列表为空 " },
-          { "value": " list", "desc": " 列表为空 " },
-          { "value": " filter", "desc": " 筛选项为空 " },
-          { "value": " news", "desc": " 没有新通知" }
+          { "value": "search", "description": "搜索结果为空" },
+          { "value": "store", "description": "门店列表为空" },
+          { "value": "list", "description": "列表为空" },
+          { "value": "filter", "description": "筛选项为空" },
+          { "value": "news", "description": "没有新通知" }
         ]
+      },
+      {
+        "name": "customStyle",
+        "type": ["String"],
+        "description": "自定义样式",
+        "defaultValue": "''"
       }
     ],
     "name": "ad-empty-state",
@@ -1336,7 +1342,7 @@
       }
     ],
     "name": "ad-floating-button",
-    "description": "悬浮按钮"
+    "description": "悬浮按钮组件"
   },
   {
     "attrs": [
@@ -1378,7 +1384,7 @@
       }
     ],
     "name": "ad-grid",
-    "description": "宫格组件，ad-grid-item 组件的父组件",
+    "description": "宫格父组件，ad-grid-item 组件的父组件",
     "tutorial": "http://ad-mob.woa.com/src-components-grid-grid"
   },
   {
@@ -1492,7 +1498,66 @@
     "description": "图标组件",
     "tutorial": "http://ad-mob.woa.com/src-components-icon-icon"
   },
-  { "attrs": [] },
+  {
+    "attrs": [
+      {
+        "name": "canvasId",
+        "type": ["String"],
+        "description": "canvas 的默认 id",
+        "defaultValue": "adCropperId"
+      },
+      {
+        "name": "image",
+        "type": ["String"],
+        "description": "图片路径",
+        "defaultValue": "''"
+      },
+      {
+        "name": "cutWidth",
+        "type": ["String"],
+        "description": "裁剪框宽度",
+        "defaultValue": "200"
+      },
+      {
+        "name": "cutHeight",
+        "type": ["String"],
+        "description": "裁剪框高度",
+        "defaultValue": "200"
+      },
+      {
+        "name": "cutColor",
+        "type": ["String"],
+        "description": "裁剪框颜色",
+        "defaultValue": "#fff"
+      },
+      {
+        "name": "cutColor",
+        "type": ["Number"],
+        "description": "裁剪框边框的宽度",
+        "defaultValue": "2"
+      },
+      {
+        "name": "maxScale",
+        "type": ["Number"],
+        "description": "图片最大的缩放比例",
+        "defaultValue": "2"
+      },
+      {
+        "name": "minScale",
+        "type": ["Number"],
+        "description": "图片缩放的最小比例",
+        "defaultValue": "0.5"
+      },
+      {
+        "name": "customStyle",
+        "type": ["String"],
+        "description": "自定义样式",
+        "defaultValue": "1"
+      }
+    ],
+    "property": "{String} prefix 默认类名前缀",
+    "default": "ad_image_cropper"
+  },
   {
     "attrs": [
       {
@@ -1513,10 +1578,10 @@
         "description": "调起的输入键盘类型",
         "defaultValue": "''",
         "enum": [
-          { "value": "text", "desc": " 文本输入键盘 " },
-          { "value": " number", "desc": " 数字输入键盘 " },
-          { "value": " idcard", "desc": " 身份证输入键盘 " },
-          { "value": " digit", "desc": " 带小数点的数字键盘" }
+          { "value": "text", "description": "文本输入键盘" },
+          { "value": "number", "description": "数字输入键盘" },
+          { "value": "idcard", "description": "身份证输入键盘" },
+          { "value": "digit", "description": "带小数点的数字键盘" }
         ]
       },
       {
@@ -1525,8 +1590,8 @@
         "description": "输入值的格式，会对输入的内容进行格式化",
         "defaultValue": "''",
         "enum": [
-          { "value": "number", "desc": " 千分号 " },
-          { "value": " phone", "desc": " 电话" }
+          { "value": "number", "description": "千分号" },
+          { "value": "phone", "description": "电话" }
         ]
       },
       {
@@ -1649,11 +1714,11 @@
         "description": "设置键盘右下角按钮的文字，仅在type=&quot;text&quot;时生效",
         "defaultValue": "done",
         "enum": [
-          { "value": "send", "desc": " 右下角按钮为“发送” " },
-          { "value": " search", "desc": " 右下角按钮为“搜索” " },
-          { "value": " next", "desc": " 右下角按钮为“下一个” " },
-          { "value": " go", "desc": " 右下角按钮为“前往” " },
-          { "value": " done", "desc": " 右下角按钮为“完成”" }
+          { "value": "send", "description": "右下角按钮为“发送”" },
+          { "value": "search", "description": "右下角按钮为“搜索”" },
+          { "value": "next", "description": "右下角按钮为“下一个”" },
+          { "value": "go", "description": "右下角按钮为“前往”" },
+          { "value": "done", "description": "右下角按钮为“完成”" }
         ]
       },
       {
@@ -1698,9 +1763,9 @@
         "description": "文字对齐方式",
         "defaultValue": "right",
         "enum": [
-          { "value": "right", "desc": " 右对齐 " },
-          { "value": " left", "desc": " 左对齐 " },
-          { "value": " center", "desc": " 居中对齐" }
+          { "value": "right", "description": "右对齐" },
+          { "value": "left", "description": "左对齐" },
+          { "value": "center", "description": "居中对齐" }
         ]
       },
       {
@@ -1794,9 +1859,9 @@
         "description": "spinner 的尺寸",
         "defaultValue": "medium",
         "enum": [
-          { "value": "large", "desc": " 16px*16px " },
-          { "value": " medium", "desc": " 20px*20px " },
-          { "value": " large", "desc": " 28px*28px" }
+          { "value": "large", "description": "16px*16px" },
+          { "value": "medium", "description": "20px*20px" },
+          { "value": "large", "description": "28px*28px" }
         ]
       },
       {
@@ -1830,11 +1895,11 @@
         "description": "类型，不同类型的按钮对应不同的颜色",
         "defaultValue": "primary",
         "enum": [
-          { "value": "success " },
-          { "value": " primary " },
-          { "value": " warning " },
-          { "value": " danger " },
-          { "value": " normal" }
+          { "value": "success" },
+          { "value": "primary" },
+          { "value": "warning" },
+          { "value": "danger" },
+          { "value": "normal" }
         ]
       },
       {
@@ -1922,7 +1987,7 @@
         "defaultValue": "''"
       },
       {
-        "name": "titleStyle",
+        "name": "customStyle",
         "type": ["String"],
         "description": "自定义样式",
         "defaultValue": "''"
@@ -1963,11 +2028,7 @@
         "type": ["String"],
         "description": "左边的 icon，默认没有图标，如果想自定义的话可以通过左边的 slot 来自定义",
         "defaultValue": "''",
-        "enum": [
-          { "value": "back " },
-          { "value": " home " },
-          { "value": " close" }
-        ]
+        "enum": [{ "value": "back" }, { "value": "home" }, { "value": "close" }]
       },
       {
         "name": "iconColor",
@@ -1976,7 +2037,7 @@
         "defaultValue": "''"
       },
       {
-        "name": "iconColor",
+        "name": "isFixed",
         "type": ["Boolean"],
         "description": "position 是否是 fixed，默认是 false",
         "defaultValue": "false"
@@ -2068,6 +2129,12 @@
         "defaultValue": "false"
       },
       {
+        "name": "placeholderIcon",
+        "type": ["Number"],
+        "description": "占位 icon",
+        "defaultValue": "image-outlined"
+      },
+      {
         "name": "iconSize",
         "type": ["Number"],
         "description": "icon的尺寸",
@@ -2086,7 +2153,7 @@
         "defaultValue": "0"
       },
       {
-        "name": "width",
+        "name": "height",
         "type": ["Number"],
         "description": "图片组件的height",
         "defaultValue": "0"
@@ -2134,14 +2201,14 @@
         "description": "弹出层的位置",
         "defaultValue": "bottomLeft",
         "enum": [
-          { "value": "top " },
-          { "value": " right " },
-          { "value": " bottom " },
-          { "value": " left " },
-          { "value": " topLeft " },
-          { "value": " topRight " },
-          { "value": " bottomRight " },
-          { "value": " bottomLeft" }
+          { "value": "top" },
+          { "value": "right" },
+          { "value": "bottom" },
+          { "value": "left" },
+          { "value": "topLeft" },
+          { "value": "topRight" },
+          { "value": "bottomRight" },
+          { "value": "bottomLeft" }
         ]
       },
       {
@@ -2165,7 +2232,7 @@
       {
         "name": "popStyle",
         "type": ["String"],
-        "description": "自定义弹出层的样式",
+        "description": "自定义弹出层的样式，弹层的宽度需要自定义",
         "defaultValue": "''"
       },
       {
@@ -2217,8 +2284,8 @@
         "description": "主题，标准的是圆形，light 是勾选",
         "defaultValue": "standard",
         "enum": [
-          { "value": "standard", "desc": " 圆形 " },
-          { "value": " light", "desc": " 勾选型" }
+          { "value": "standard", "description": "圆形" },
+          { "value": "light", "description": "勾选型" }
         ]
       },
       {
@@ -2341,7 +2408,7 @@
         "name": "leftIconSize",
         "type": ["Number"],
         "description": "search 图标的大小",
-        "defaultValue": "18"
+        "defaultValue": "22"
       },
       {
         "name": "hasRightIcon",
@@ -2514,7 +2581,7 @@
         "defaultValue": "ad_select_item"
       },
       {
-        "name": "prefix",
+        "name": "key",
         "type": ["Any"],
         "description": "必填值，selectItem 的唯一标识，select 根据这个值来决定展示哪个 selectItem",
         "defaultValue": "null"
@@ -2538,7 +2605,7 @@
         "defaultValue": "null"
       },
       {
-        "name": "value",
+        "name": "options",
         "type": ["Array.<{ title: string, value: any }>"],
         "description": "可选值的数组，每个数组元素是对象，格式为 { title: string, value: any}, title 是对应的选项的名称，value 是选项的唯一标识，可以是任意值",
         "defaultValue": "[]"
@@ -2676,10 +2743,10 @@
         "description": "出现位置，默认是从底部出现",
         "defaultValue": "bottom",
         "enum": [
-          { "value": "bottom " },
-          { "value": " left " },
-          { "value": " right " },
-          { "value": " up" }
+          { "value": "bottom" },
+          { "value": "left" },
+          { "value": "right" },
+          { "value": "up" }
         ]
       },
       {
@@ -2828,9 +2895,9 @@
         "description": "组件尺寸",
         "defaultValue": "medium",
         "enum": [
-          { "value": "large", "desc": " 28px*28px " },
-          { "value": " medium", "desc": " 20px*20px " },
-          { "value": " small", "desc": " 16px*16px" }
+          { "value": "large", "description": "28px*28px" },
+          { "value": "medium", "description": "20px*20px" },
+          { "value": "small", "description": "16px*16px" }
         ]
       },
       {
@@ -2851,8 +2918,8 @@
         "description": "加载圈和文字的排列方式",
         "defaultValue": "horizontal",
         "enum": [
-          { "value": "horizontal", "desc": " 水平排列 " },
-          { "value": " vertical", "desc": " 垂直排列" }
+          { "value": "horizontal", "description": "水平排列" },
+          { "value": "vertical", "description": "垂直排列" }
         ]
       },
       {
@@ -2865,6 +2932,43 @@
     "name": "ad-spinner",
     "description": "输入组件",
     "tutorial": "http://ad-mob.woa.com/src-components-spinner-spinner"
+  },
+  {
+    "attrs": [
+      {
+        "name": "prefix",
+        "type": ["String"],
+        "description": "默认类名前缀",
+        "defaultValue": "ad_spring_layout"
+      },
+      {
+        "name": "minHeight",
+        "type": ["String"],
+        "description": "布局的最小高度，这个布局需要最小的高度来撑起，必填项",
+        "defaultValue": "100vh"
+      },
+      {
+        "name": "bodyStyle",
+        "type": ["String"],
+        "description": "主体区域的自定义样式",
+        "defaultValue": "''"
+      },
+      {
+        "name": "footStyle",
+        "type": ["String"],
+        "description": "底部区域的自定义样式",
+        "defaultValue": "''"
+      },
+      {
+        "name": "customStyle",
+        "type": ["String"],
+        "description": "自定义样式",
+        "defaultValue": "''"
+      }
+    ],
+    "name": "ad-layout",
+    "description": "弹性布局组件，",
+    "tutorial": ""
   },
   {
     "attrs": [
@@ -3006,7 +3110,7 @@
         "type": ["String"],
         "description": "排列方向",
         "defaultValue": "horizontal",
-        "enum": [{ "value": "horizontal " }, { "value": " vertical" }]
+        "enum": [{ "value": "horizontal" }, { "value": "vertical" }]
       },
       {
         "name": "banner",
@@ -3123,7 +3227,7 @@
         "type": ["String"],
         "description": "尺寸",
         "defaultValue": "large",
-        "enum": [{ "value": "large " }, { "value": " small" }]
+        "enum": [{ "value": "large" }, { "value": "small" }]
       },
       {
         "name": "customStyle",
@@ -3291,8 +3395,8 @@
         "description": "主题",
         "defaultValue": "standard",
         "enum": [
-          { "value": "standard", "desc": " 有滑动条 " },
-          { "value": " light", "desc": " 没有滑动条" }
+          { "value": "standard", "description": "有滑动条" },
+          { "value": "light", "description": "没有滑动条" }
         ]
       },
       {
@@ -3374,10 +3478,10 @@
         "description": "值，用作每个 tag 的唯一标识",
         "defaultValue": "light",
         "enum": [
-          { "value": "standard " },
-          { "value": " light " },
-          { "value": " text " },
-          { "value": " outlined" }
+          { "value": "standard" },
+          { "value": "light" },
+          { "value": "text" },
+          { "value": "outlined" }
         ]
       },
       {
@@ -3386,11 +3490,11 @@
         "description": "类型，不同类型的按钮对应不同的颜色",
         "defaultValue": "primary",
         "enum": [
-          { "value": "success " },
-          { "value": " primary " },
-          { "value": " warning " },
-          { "value": " danger " },
-          { "value": " normal" }
+          { "value": "success" },
+          { "value": "primary" },
+          { "value": "warning" },
+          { "value": "danger" },
+          { "value": "normal" }
         ]
       },
       {
@@ -3410,7 +3514,7 @@
         "type": ["String"],
         "description": "尺寸",
         "defaultValue": "small",
-        "enum": [{ "value": "small " }, { "value": " large" }]
+        "enum": [{ "value": "small" }, { "value": "large" }]
       },
       {
         "name": "round",
@@ -3640,7 +3744,71 @@
     "description": "多行输入组件",
     "tutorial": "http://ad-mob.woa.com/src-components-textarea-textarea"
   },
-  { "attrs": [] },
+  {
+    "attrs": [
+      {
+        "name": "prefix",
+        "type": ["String"],
+        "description": "默认类名前缀",
+        "defaultValue": "ad_toast"
+      },
+      {
+        "name": "visible",
+        "type": ["Boolean"],
+        "description": "是否展示，默认展示一段时间后会自动隐藏，loading 情况下默认不会自动隐藏，需要手动设置"
+      },
+      {
+        "name": "title",
+        "type": ["String", "Array.<String>"],
+        "description": "文案",
+        "defaultValue": "''"
+      },
+      {
+        "name": "titleList",
+        "type": ["Array.<String>"],
+        "description": "文案列表，适用于多行文案的情况"
+      },
+      {
+        "name": "icon",
+        "type": ["String"],
+        "description": "图标",
+        "defaultValue": "none"
+      },
+      {
+        "name": "iconSize",
+        "type": ["Number"],
+        "description": "图标的尺寸",
+        "defaultValue": "46"
+      },
+      {
+        "name": "loadingSize",
+        "type": ["Number"],
+        "description": "加载图标的尺寸",
+        "defaultValue": "40"
+      },
+      {
+        "name": "loading",
+        "type": ["Boolean"],
+        "description": "是否是加载态",
+        "defaultValue": "false"
+      },
+      {
+        "name": "duration",
+        "type": ["String"],
+        "description": "弹层停留时间",
+        "defaultValue": "1000"
+      },
+      {
+        "name": "customStyle",
+        "type": ["String"],
+        "description": "自定义样式",
+        "defaultValue": "''"
+      }
+    ],
+    "name": "ad-toast",
+    "description": "轻提示组件",
+    "tutorial": ""
+  },
   {
     "attrs": [
       {
@@ -3650,7 +3818,7 @@
         "defaultValue": "ad_upload_image"
       },
       {
-        "name": "prefix",
+        "name": "placeholder",
         "type": ["String"],
         "description": "占位图，自定义占位图，组件提供的可选的展位图请参考 placeholderType",
         "defaultValue": "''"
@@ -3661,11 +3829,14 @@
         "description": "占位图的类型",
         "defaultValue": "''",
         "enum": [
-          { "value": "IDPerson", "desc": " 身份证人像面 " },
-          { "value": " IDNation", "desc": " 身份证国徽面 " },
-          { "value": " IDTaiWan", "desc": " 台胞证背面，无国徽 " },
-          { "value": " businessLicense", "desc": " 营业执照 " },
-          { "value": " serviceLicense", "desc": " 互联网新闻信息服务许可证" }
+          { "value": "IDPerson", "description": "身份证人像面" },
+          { "value": "IDNation", "description": "身份证国徽面" },
+          { "value": "IDTaiWan", "description": "台胞证背面，无国徽" },
+          { "value": "businessLicense", "description": "营业执照" },
+          {
+            "value": "serviceLicense",
+            "description": "互联网新闻信息服务许可证"
+          }
         ]
       },
       {
@@ -3723,7 +3894,7 @@
         "defaultValue": "20"
       },
       {
-        "name": "iconSize",
+        "name": "sizeType",
         "type": ["Array"],
         "description": "所选的图片的尺寸, 可选值为：original、compressed",
         "defaultValue": "['original', 'compressed']"
