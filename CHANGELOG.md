@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.12](https://github.com/zhengpq/ad-mob/compare/v0.0.11...v0.0.12) (2021-07-22)
+
+
+### Features
+
+* 组件功能更新 ([9b0117a](https://github.com/zhengpq/ad-mob/commit/9b0117a3276f7a810185fa53ef48f8237a42b9e0))
+
 ### [0.0.11](https://github.com/zhengpq/ad-mob/compare/v0.0.10...v0.0.11) (2021-07-22)
 
 
