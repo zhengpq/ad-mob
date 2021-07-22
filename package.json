@@ -2,7 +2,7 @@
   "name": "ad-mob",
   "displayName": "ad-mob",
   "description": "ADUI 小程序端组件库自动提示插件",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "publisher": "zhengpq",
   "engines": {
     "vscode": "^1.56.0"
