@@ -2,6 +2,35 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.27](https://github.com/zhengpq/ad-mob/compare/v0.0.8...v0.0.27) (2021-11-30)
+
+
+### Features
+
+* icon 更新 ([c1e2e01](https://github.com/zhengpq/ad-mob/commit/c1e2e0141a4b2d0aca4c0242f8ebe5757bab870b))
+* icon 更新 ([8776622](https://github.com/zhengpq/ad-mob/commit/8776622d1d3f867d8d8044cff913b480c1fed6f7))
+* icon 更新 ([2e281d5](https://github.com/zhengpq/ad-mob/commit/2e281d5a6e0b46e7859beb69364d8a1d7457f1a4))
+* icon 更新 ([fe9e970](https://github.com/zhengpq/ad-mob/commit/fe9e97090f0966ae640fee3fbab0ea5a6faecba9))
+* icon 更新 ([9ea6f12](https://github.com/zhengpq/ad-mob/commit/9ea6f122d6ffe00517e2fc03e19c4b1c9aa534c9))
+* icon 更新 ([b41cdd3](https://github.com/zhengpq/ad-mob/commit/b41cdd30bf98ffc8b9faf09e4d24b30e1a39520c))
+* 组件功能更新 ([01bcf82](https://github.com/zhengpq/ad-mob/commit/01bcf8253e8a13f1717a0281a685c818ea8123fc))
+* 组件功能更新 ([e0d6d02](https://github.com/zhengpq/ad-mob/commit/e0d6d0259c0652eb02df7f0104c54ee61ac50743))
+* 组件功能更新 ([f82ba59](https://github.com/zhengpq/ad-mob/commit/f82ba59d54abbe1a2cf034a75980d0c00fa70208))
+* 组件功能更新 ([58d0645](https://github.com/zhengpq/ad-mob/commit/58d06457ef610fe8c2d49487ea93379e1677997e))
+* 组件功能更新 ([0fa4924](https://github.com/zhengpq/ad-mob/commit/0fa4924c1a00fd78c0aff3e43fbad6c3f65866d3))
+* 组件功能更新 ([e3c2c9b](https://github.com/zhengpq/ad-mob/commit/e3c2c9b3f19412e951c0a66bd80eeb2dfed7088c))
+* 组件功能更新 ([0882d72](https://github.com/zhengpq/ad-mob/commit/0882d72268a679e895001da489a0279226c81643))
+* 组件功能更新 ([88fef12](https://github.com/zhengpq/ad-mob/commit/88fef12cf45a2e02dcb38d8895ace318cb0e0d77))
+* 组件功能更新 ([743618e](https://github.com/zhengpq/ad-mob/commit/743618eb423c51bc842d4f7df30daf2a317aa507))
+* 组件功能更新 ([dfa8011](https://github.com/zhengpq/ad-mob/commit/dfa80111d0d80ef3e4bfc3ea4298211109ebf46a))
+* 组件功能更新 ([cd3cd87](https://github.com/zhengpq/ad-mob/commit/cd3cd87d803e892124be3e11778017abb669477d))
+* 组件功能更新 ([04e2250](https://github.com/zhengpq/ad-mob/commit/04e2250421085b7b9d8c06acb1400af7830bcb63))
+* 组件功能更新 ([fcc6ef8](https://github.com/zhengpq/ad-mob/commit/fcc6ef80bcc47f30aec7441aea32a274cd1fa0ab))
+* 组件功能更新 ([9b0117a](https://github.com/zhengpq/ad-mob/commit/9b0117a3276f7a810185fa53ef48f8237a42b9e0))
+* 组件功能更新 ([a23f876](https://github.com/zhengpq/ad-mob/commit/a23f8768daa3a3a2e05e9f36b6615947a83fc516))
+* 组件功能更新 ([1de4ce5](https://github.com/zhengpq/ad-mob/commit/1de4ce578523c6b3509125c136abacff2b4187c5))
+* 组件功能更新 ([82958aa](https://github.com/zhengpq/ad-mob/commit/82958aa24bca2631c293e00dc60a6440128845ec))
+
 ### [0.0.26](https://github.com/zhengpq/ad-mob/compare/v0.0.8...v0.0.26) (2021-11-30)
 
 
