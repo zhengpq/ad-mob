@@ -85,6 +85,6 @@
   "dependencies": {
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
-    "adui-icon": "^1.8.17"
+    "adui-icon": "^1.8.18"
   }
 }
